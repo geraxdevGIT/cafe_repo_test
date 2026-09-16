@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Café Loma — coffee &amp; quiet mornings</title>
+  <style>
+    :root {
+      --bean: #2b1810;
+      --crema: #f4ebe1;
+      --foam: #fffaf5;
+      --roast: #6f3d24;
+      --caramel: #c48a4a;
+      --ink: #1c120c;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: "Palatino Linotype", Palatino, "Book Antiqua", Georgia, serif;
+      background: var(--crema);
+      color: var(--ink);
+      line-height: 1.5;
+    }
+    a { color: inherit; }
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.2rem 8vw;
+      background: var(--bean);
+      color: var(--foam);
+    }
+    .logo { font-size: 1.35rem; letter-spacing: 0.08em; }
+    nav { display: flex; gap: 1.4rem; font-size: 0.95rem; }
+    nav a { text-decoration: none; opacity: 0.9; }
+    .intro {
+      text-align: center;
+      padding: 2.2rem 8vw 0.5rem;
+    }
+    .intro h1 { font-size: clamp(2rem, 5vw, 3.2rem); color: var(--roast); font-weight: 500; }
+    .intro p { margin-top: 0.6rem; opacity: 0.85; }
+    .feat {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5rem;
+      padding: 1.5rem 8vw 2.5rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    @media (max-width: 720px) { .feat { grid-template-columns: 1fr; } }
+    figure {
+      margin: 0;
+      background: var(--foam);
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 18px 40px rgba(43, 24, 16, 0.18);
+    }
+    figure img {
+      display: block;
+      width: 100%;
+      height: 420px;
+      object-fit: cover;
+      object-position: center;
+    }
+    figcaption {
+      padding: 0.9rem 1.1rem 1.15rem;
+      font-size: 1.05rem;
+    }
+    figcaption strong { color: var(--roast); }
+    .price { float: right; font-family: system-ui, sans-serif; }
+    main { padding: 0 8vw 4rem; max-width: 1200px; margin: 0 auto; }
+    h2 { font-size: 1.8rem; margin-bottom: 1rem; color: var(--roast); }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1rem;
+    }
+    article {
+      background: var(--foam);
+      border: 1px solid #e6d5c4;
+      border-radius: 16px;
+      padding: 1.1rem;
+    }
+    footer {
+      padding: 1.5rem 8vw;
+      background: var(--bean);
+      color: var(--foam);
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">Café Loma</div>
+    <nav>
+      <a href="#photos">Today</a>
+      <a href="#menu">Menu</a>
+    </nav>
+  </header>
+
+  <section class="intro">
+    <h1>Come hungry. Stay for the cup.</h1>
+    <p>A big coffee, a warm bowl — the two things we put in the middle of the table.</p>
+  </section>
+
+  <section class="feat" id="photos">
+    <figure>
+      <img
+        src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&amp;fit=crop&amp;w=1400&amp;q=80"
+        alt="A large cup of coffee with a thick crema, steam rising"
+        width="700"
+        height="420"
+      />
+      <figcaption>
+        <strong>The house cup</strong>
+        <span class="price">$42</span><br />
+        Wide mug, slow drip, chocolate and orange peel. Made to hold with both hands.
+      </figcaption>
+    </figure>
+    <figure>
+      <img
+        src="https://images.unsplash.com/photo-1547592166-23ac45744acd?auto=format&amp;fit=crop&amp;w=1400&amp;q=80"
+        alt="A bowl of bright tomato soup with herbs"
+        width="700"
+        height="420"
+      />
+      <figcaption>
+        <strong>Tomato soup</strong>
+        <span class="price">$55</span><br />
+        Ripe tomatoes, a little cream, basil. Served hot, with bread if you want to dip.
+      </figcaption>
+    </figure>
+  </section>
+
+  <main id="menu">
+    <h2>Also on the board</h2>
+    <div class="grid">
+      <article>
+        <h3>Café de olla <span class="price">$42</span></h3>
+        <p>Cinnamon, piloncillo, clay cup.</p>
+      </article>
+      <article>
+        <h3>Oat latte <span class="price">$48</span></h3>
+        <p>Double shot, steamed oat.</p>
+      </article>
+      <article>
+        <h3>Concha <span class="price">$28</span></h3>
+        <p>Vanilla or chocolate.</p>
+      </article>
+    </div>
+  </main>
+
+  <footer>Café Loma · demo page · photos from Unsplash</footer>
+</body>
+</html>
